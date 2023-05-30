@@ -94,6 +94,18 @@ _ipvar:_  variables to specify your network's IP ranges
 _alert, log, pass, or drop_ : rules can using in the configuration
 _include $RULE_PATH/icmp.rules:_ To enable rules in the configuration file (in this example we enable icmp rules)
 
+And now let's start with configuration of detction of icmp traffic:
+
+first we need to identifier the range of network where detect
+
+and after we need to enable icmp processeur by write:
+
+```bat
+
+preprocessor icmp
+
+```
+
 
 
 
