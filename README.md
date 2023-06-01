@@ -32,7 +32,8 @@ Realisé Par : Adil Erraad
   
 ## 2. **Network Topology:**
 
-![image](https://github.com/adilraad2001/TP5_Sec_Reseaux/assets/99618982/ff2226f1-8c51-42ab-bec0-be71677faf82)
+![2023-05-30 14_53_05-a drawio - draw io](https://github.com/adilraad2001/TP5_Sec_Reseaux/assets/99618982/1e3b583f-59d7-4142-9ef3-aa4fd22d1d5d)
+
 
 As shown in the Topology we have to create three zone (GREEN:LOCAL  - Red: Internet  -ORANGE: DMZ)
 
@@ -41,16 +42,22 @@ And since we have already made these Configguration in the previous practical ex
 To start the firewall settings, we must add a new law that allows the possibility of making a connection from the orange area to the green area By connecting to Setting panel from client machine to add this new rules : 
 
 ![image](https://github.com/adilraad2001/TP5_Sec_Reseaux/assets/99618982/9e613a29-efa3-45df-b037-5cea4c068e4b)
+![2023-05-30 15_15_42-Ubuntu  Running  - Oracle VM VirtualBox](https://github.com/adilraad2001/TP5_Sec_Reseaux/assets/99618982/711e3875-bc9b-4cc6-9a8a-03a8f8e08d8f)
+
 
 u can do this by going to Firewall menu -> Firewall Rules -> Internal Traffic
 
 Before:
 
 ![image](https://github.com/adilraad2001/TP5_Sec_Reseaux/assets/99618982/58e035d6-b89e-4c0c-831b-c8ca622f1396)
+![2023-05-30 15_19_38-Ubuntu  Running  - Oracle VM VirtualBox](https://github.com/adilraad2001/TP5_Sec_Reseaux/assets/99618982/5d774d5d-5c3f-42ae-8209-2a876416b1b7)
+
 
 After :
 
 ![image](https://github.com/adilraad2001/TP5_Sec_Reseaux/assets/99618982/0df136e5-1349-428d-94bd-cf0da92d434c)
+![2023-05-30 15_20_24-Ubuntu  Running  - Oracle VM VirtualBox](https://github.com/adilraad2001/TP5_Sec_Reseaux/assets/99618982/482c1e49-3429-4bb1-9123-cf04b9a8d0ef)
+
 
 And now lets start to install Snort and configure:
 
@@ -66,14 +73,21 @@ sudo apt install snort
 And while you installing snort see some configuration prompt:
 
 ![image](https://github.com/adilraad2001/TP5_Sec_Reseaux/assets/99618982/b93cff5b-357a-46fd-b0ae-9ae2cf7f3017)
+![2023-05-30 15_29_23-Ubuntu  Running  - Oracle VM VirtualBox](https://github.com/adilraad2001/TP5_Sec_Reseaux/assets/99618982/5fd9b4f0-d65e-4510-8a92-846e7db394d0)
+
+
 
 this for choosing the interface where the snort will listening
 
 ![image](https://github.com/adilraad2001/TP5_Sec_Reseaux/assets/99618982/331249a4-c4f8-4fae-b5db-889a8fc7b1ca)
 
+![2023-05-30 15_30_50-Ubuntu  Running  - Oracle VM VirtualBox](https://github.com/adilraad2001/TP5_Sec_Reseaux/assets/99618982/37638b04-c3c1-484e-af3a-49ffeb419c97)
+
 For choose the range of the local network in this interface
 
 ![image](https://github.com/adilraad2001/TP5_Sec_Reseaux/assets/99618982/70c5e5c2-fd3d-4302-a39b-d4a48691c98a)
+![2023-05-30 15_31_45-Ubuntu  Running  - Oracle VM VirtualBox](https://github.com/adilraad2001/TP5_Sec_Reseaux/assets/99618982/e6d4ab20-5e81-4bf8-b615-ad56904624c4)
+
 
 For the promiscuous mode for the network adapter
 
@@ -128,14 +142,20 @@ sid:1000001: This is the unique identifier for the rule. It helps to identify an
 Lets try this:
 
 ![image](https://github.com/adilraad2001/TP5_Sec_Reseaux/assets/99618982/40c7c8ff-f397-48d4-a061-a618dd6d14f5)
+![2023-05-30 21_33_29-Editing TP5_Sec_Reseaux_README md at main · adilraad2001_TP5_Sec_Reseaux · GitHu](https://github.com/adilraad2001/TP5_Sec_Reseaux/assets/99618982/11637208-ad2d-410b-b08a-b14a54d28dac)
+
 
 As you can see we detect the icmp request:
 
 ![image](https://github.com/adilraad2001/TP5_Sec_Reseaux/assets/99618982/29cbe195-d121-471a-a091-84721f627e1b)
+![2023-05-30 21_34_31-DMZ  Running  - Oracle VM VirtualBox](https://github.com/adilraad2001/TP5_Sec_Reseaux/assets/99618982/8523374d-0408-4c68-b6a4-733133a45fdf)
+
 
 it's the same thing between the different services:
 
 ![image](https://github.com/adilraad2001/TP5_Sec_Reseaux/assets/99618982/bf3928de-ebf4-408d-98a9-b2f1d9749491)
+![2023-05-30 21_22_50-Ubuntu 1  Running  - Oracle VM VirtualBox](https://github.com/adilraad2001/TP5_Sec_Reseaux/assets/99618982/5a56e703-b46a-4fb9-9b11-fbdb21c2a75c)
+
 
 
  3. **Conclusion:**
